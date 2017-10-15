@@ -1,0 +1,37 @@
+1c1
+< FROM debian:jessie
+---
+> FROM resin/rpi-raspbian:jessie
+41a42
+> 	build-essential \
+51a53
+> 	libjpeg-dev \
+65d66
+<         linux-headers-amd64 \
+69,70c70,71
+<         python-dev \
+<         python-pip \
+---
+> 	python-dev \ 
+> 	python-pip \
+71a73
+> 	python-setuptools \
+73c75,76
+<         sqlite \
+---
+> 	raspberrypi-kernel-headers \
+> 	sqlite3 \
+77a81
+>     pip install --upgrade virtualenv ;\
+80c84,86
+<     pip install --upgrade supervisor \
+---
+>     pip install --upgrade supervisor ;\
+>     pip install --upgrade ndg-httpsclient ;\
+>     pip install --upgrade enum34 ipaddress \
+95a102
+> 	libjpeg-dev \
+103d109
+<         linux-headers-amd64 \
+105a112
+> 	raspberrypi-kernel-headers \

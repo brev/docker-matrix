@@ -1,5 +1,5 @@
 
-# Introduction
+# docker-matrix for rpi/armhf
 
 Dockerfile for installation of [matrix] open federated Instant Messaging and
 VoIP communication server.
